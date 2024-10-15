@@ -15,4 +15,4 @@ const SignIn = () => {
     </div>
   );
 };
-export default SignIn
+export default SignIn;
