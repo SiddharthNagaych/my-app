@@ -12,7 +12,7 @@ const Navbar = async () => {
         <Link href="/" className="font-bold">
           Home
         </Link>
-        <div className="flex items-center gap-x-5 mx-[400px]">
+        <div className="flex items-center gap-x-5">
           <Link href="/middleware">Middleware </Link>
           <Link href={"/server"}>Home </Link>
         </div>
@@ -27,17 +27,17 @@ const Navbar = async () => {
           <>
             <div className="flex items-center gap-x-2 text-sm">
               {session?.user?.name}
-              {session?.user?.image ||(
+              {session?.user?.image &&(
                 <Image
                 className="rounded-full"
                 width={30}
                 height={30}
-                alt="use Avatar"
-                src={session?.user?.image||""}
+                alt="User Avatar"
+                src={session?.user?.image || ""}
                 />
               )}
             </div>
-            <Logout />
+            <Logout/>
           </>
         )}
       </div>
